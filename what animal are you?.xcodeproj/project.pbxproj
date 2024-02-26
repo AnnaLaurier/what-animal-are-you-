@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		441251B02B8C9C0C00102982 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441251AF2B8C9C0C00102982 /* QuestionsViewController.swift */; };
+		441251B22B8C9C1A00102982 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441251B12B8C9C1A00102982 /* ResultViewController.swift */; };
 		44D37F1C2B73CFCC00B652F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D37F1B2B73CFCC00B652F2 /* AppDelegate.swift */; };
 		44D37F1E2B73CFCC00B652F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D37F1D2B73CFCC00B652F2 /* SceneDelegate.swift */; };
-		44D37F202B73CFCC00B652F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D37F1F2B73CFCC00B652F2 /* ViewController.swift */; };
+		44D37F202B73CFCC00B652F2 /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D37F1F2B73CFCC00B652F2 /* IntroductionViewController.swift */; };
 		44D37F232B73CFCC00B652F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D37F212B73CFCC00B652F2 /* Main.storyboard */; };
 		44D37F252B73CFCD00B652F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44D37F242B73CFCD00B652F2 /* Assets.xcassets */; };
 		44D37F282B73CFCD00B652F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44D37F262B73CFCD00B652F2 /* LaunchScreen.storyboard */; };
@@ -17,10 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		441251AF2B8C9C0C00102982 /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		441251B12B8C9C1A00102982 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		44D37F182B73CFCC00B652F2 /* what animal are you?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "what animal are you?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44D37F1B2B73CFCC00B652F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44D37F1D2B73CFCC00B652F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44D37F1F2B73CFCC00B652F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44D37F1F2B73CFCC00B652F2 /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		44D37F222B73CFCC00B652F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44D37F242B73CFCD00B652F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44D37F272B73CFCD00B652F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +76,9 @@
 		44D37F2F2B74D36700B652F2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				44D37F1F2B73CFCC00B652F2 /* ViewController.swift */,
+				44D37F1F2B73CFCC00B652F2 /* IntroductionViewController.swift */,
+				441251AF2B8C9C0C00102982 /* QuestionsViewController.swift */,
+				441251B12B8C9C1A00102982 /* ResultViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -165,10 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44D37F202B73CFCC00B652F2 /* ViewController.swift in Sources */,
+				44D37F202B73CFCC00B652F2 /* IntroductionViewController.swift in Sources */,
+				441251B02B8C9C0C00102982 /* QuestionsViewController.swift in Sources */,
 				44D37F352B74E85100B652F2 /* Quastion.swift in Sources */,
 				44D37F1C2B73CFCC00B652F2 /* AppDelegate.swift in Sources */,
 				44D37F1E2B73CFCC00B652F2 /* SceneDelegate.swift in Sources */,
+				441251B22B8C9C1A00102982 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

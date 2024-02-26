@@ -21,7 +21,7 @@ struct Question {
                     Answer(title: "Кукуруза", animal: .turtle)
                 ],
 
-                type: .multiple
+                type: .single
             ),
 
             Question(
@@ -33,6 +33,15 @@ struct Question {
                     Answer(title: "Есть", animal: .turtle)
                 ],
 
+                type: .multiple
+            ),
+            
+            Question(
+                title: "Любите ли вы поездки на машине?",
+                answers: [
+                    Answer(title: "Ненавижу", animal: .dog),
+                    Answer(title: "Обожаю", animal: .cat)
+                ],
                 type: .ranged
             )
         ]
