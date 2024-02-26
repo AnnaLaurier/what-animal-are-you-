@@ -24,8 +24,14 @@ class QuestionsViewController: UIViewController {
 
 
     @IBOutlet weak var rangedStackView: UIStackView!
-    
-    @IBOutlet weak var rangesSlider: UISlider!
+
+    @IBOutlet weak var rangesSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangesSlider.maximumValue = answerCount
+            rangesSlider.value = answerCount / 2
+        }
+    }
     @IBOutlet weak var rangedButton: UIButton!
 
     @IBOutlet var rangedLabels: [UILabel]!
@@ -42,11 +48,16 @@ class QuestionsViewController: UIViewController {
         updateUI()
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        <#code#>
+//    }
+
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
         answersChosen.append(currentAnswer)
 
+        
         nextQuestion()
     }
     
@@ -61,6 +72,10 @@ class QuestionsViewController: UIViewController {
     }
 
     @IBAction func rangedAnswerButtonPressed() {
+        let index = lrintf(rangesSlider.value)
+        answersChosen.append(currentAnswers[index])
+
+        nextQuestion()
     }
     
 }
@@ -89,7 +104,7 @@ extension QuestionsViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged: break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
 
@@ -107,6 +122,13 @@ extension QuestionsViewController {
         for (label, answer) in zip(multipleLabels, answers) {
             label.text = answer.title
         }
+    }
+
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden.toggle()
+
+        rangedLabels.first?.text = answers.first?.title
+        rangedLabels.last?.text = answers.last?.title
     }
 
     private func nextQuestion() {
