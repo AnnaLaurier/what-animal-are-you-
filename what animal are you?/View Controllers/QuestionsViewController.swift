@@ -46,11 +46,13 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        rangedButton.setTitle("Дальше", for: .normal)
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        <#code#>
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController = segue.destination as? ResultViewController
+        resultViewController?.answers = answersChosen
+    }
 
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
